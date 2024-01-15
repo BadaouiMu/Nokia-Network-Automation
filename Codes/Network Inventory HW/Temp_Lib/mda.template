@@ -1,0 +1,23 @@
+Value id (\d+)
+Value id2 (\d+)
+Value card (\S*)
+Value admin_S (\S*)
+Value oper_S (\S*)
+Value part (\S*)
+Value date (\S*)
+
+Start
+  ^===============================================================================
+  ^MDA ${id}/${id2} detail
+  ^===============================================================================
+  ^Slot  Mda   Provisioned Type                            Admin     Operational
+  ^                Equipped Type (if different)            State     State
+  ^-------------------------------------------------------------------------------
+  ^(\S*\s+\S\s+)${card}(\s+)${admin_S}(\s+)${oper_S}
+  ^    Part number                   : ${part} 
+  ^    Manufacture date              : ${date} 
+  ^(\s*)Base MAC address -> Record
+
+EOF
+
+

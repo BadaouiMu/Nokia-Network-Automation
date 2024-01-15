@@ -1,0 +1,21 @@
+#Value id (\d)
+Value port1 (\d+)
+Value port2 (\d+)
+Value port3 (\d+)
+Value admin_S (\S*)
+Value oper_S (\S*)
+Value type (\S*)
+
+
+Start
+  ^===============================================================================
+  #^Ports on Slot ${id}
+  ^===============================================================================
+  ^Port          Admin Link Port    Cfg  Oper LAG/ Port Port Port   C/QS/S/XFP/
+  ^Id            State      State   MTU  MTU  Bndl Mode Encp Type   MDIMDX
+  ^-------------------------------------------------------------------------------
+  ^${port1}/${port2}/${port3}(\s+)${admin_S}(\s+\S+\s+)${oper_S}(\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+)${type} -> Record
+
+EOF
+
+

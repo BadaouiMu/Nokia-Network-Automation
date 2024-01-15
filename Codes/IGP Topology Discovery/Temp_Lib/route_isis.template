@@ -1,0 +1,12 @@
+Value address (\d+\.\d+\.\d+\.\d+)
+Value cost (\d+)
+Value name (\S+)
+
+Start   
+  ^===============================================================================
+  ^Prefix[Flags]                     Metric     Lvl/Typ     Ver.  SysID/Hostname
+  ^  NextHop                                                MT     AdminTag/SID[F]
+  ^-------------------------------------------------------------------------------
+  ^${address}/32(\s+)${cost}(\s+\S+\s+\d+\s+)${name} -> Record
+
+EOF

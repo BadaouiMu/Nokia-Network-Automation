@@ -1,0 +1,8 @@
+Value learned (\d+)
+
+Start
+  ^No. of (.*)${learned} -> Record                
+
+EOF
+
+

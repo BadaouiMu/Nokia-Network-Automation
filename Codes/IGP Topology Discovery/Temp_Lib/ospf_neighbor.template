@@ -1,0 +1,11 @@
+Value neighbor (\d+\.\d+\.\d+\.\d+)
+
+Start
+  ^Interface-Name                   Rtr Id          State      Pri  RetxQ   TTL
+  ^   Area-Id
+  ^-------------------------------------------------------------------------------
+  ^(\S+\s+)${neighbor} -> Record
+
+EOF
+
+

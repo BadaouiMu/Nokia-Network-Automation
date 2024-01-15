@@ -1,0 +1,15 @@
+Value sys (\S*)
+Value type (.*)
+Value version (\S*)
+Value sys_up_time (.*)
+
+Start
+  ^===============================================================================
+  ^System Information
+  ^===============================================================================
+  ^System Name            : ${sys}
+  ^System Type            : ${type}
+  ^System Version         : ${version}
+  ^System Up Time         : ${sys_up_time} -> Record
+
+EOF

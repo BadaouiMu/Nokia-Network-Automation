@@ -1,0 +1,10 @@
+Value router (\S+)
+Value id (\S+)
+
+Start
+  ^(\s+)IS-Hostname(\s+):(\s+)${router}
+  ^(\s+)Router ID(\s+):(\s+)${id} -> Record
+
+EOF
+
+

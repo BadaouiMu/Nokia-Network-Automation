@@ -1,0 +1,8 @@
+Value id (\S+)
+
+Start
+  ^system
+  ^   ${id}(/32|/128) -> Record
+  
+EOF
+

@@ -1,0 +1,17 @@
+#Value id (\d)
+Value port1 (\S+)
+Value port2 (\S+)
+Value port3 (\S+)
+Value desc (.*)
+
+
+Start
+  ^===============================================================================
+  ^Port Id        Description
+  ^-------------------------------------------------------------------------------
+  #^${port}(\s+)${admin_S}(\s+\S+\s+)${oper_S}(\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+)${type} -> Record
+  ^${port1}/${port2}/${port3}(\s+)${desc} -> Record
+
+EOF
+
+

@@ -1,0 +1,11 @@
+Value sys ([.:\dabcdef]+)
+Value sys2 (\d+)
+Value pro (\S+)
+Value pro2 (\S+)
+
+Start
+  ^${sys}
+  ^Def. Instance  ${sys2}(\s+\d+\s+\d+\s+\S+\s+\S+\s+)\(${pro}\) -> Record
+  ^(\s+\d+\s+\d+\s+\S+\s+)\(${pro2}\) -> Record
+
+EOF

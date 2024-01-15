@@ -1,0 +1,16 @@
+Value id (\S+)
+Value card (\S+)
+Value part (\S+)
+
+
+Start
+  ^===============================================================================
+  ^MDA ${id} detail
+  ^===============================================================================
+  ^Slot  Mda   Provisioned Type                            Admin     Operational
+  ^                Equipped Type (if different)            State     State
+  ^-------------------------------------------------------------------------------
+  ^(\S*\s+\S\s+)${card}(\s+)up(\s+)up
+  ^    Part number                   : ${part} -> Record
+
+EOF

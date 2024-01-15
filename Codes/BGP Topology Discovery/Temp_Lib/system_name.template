@@ -1,0 +1,6 @@
+Value sys (\S+)
+
+Start
+  ^System Name            : ${sys} -> Record
+
+EOF

@@ -1,0 +1,20 @@
+Value id (\S)
+Value card (\S*|.*)
+Value admin_S (\S*|.*)
+Value oper_S (\S*|.*)
+Value part (\S*|.*)
+Value date (\S*|.*)
+
+Start
+  ^===============================================================================
+  ^Card ${id}
+  ^===============================================================================
+  ^Slot      Provisioned Type                         Admin Operational   Comments
+  ^              Equipped Type (if different)         State State
+  ^-------------------------------------------------------------------------------
+  ^(\S\s+)${card}(\s+)${admin_S}(\s+)${oper_S}
+  ^    Part number                   : ${part}
+  ^    Manufacture date              : ${date}
+  ^(\s*)Memory capacity -> Record
+
+EOF
